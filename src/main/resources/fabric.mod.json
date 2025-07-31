@@ -12,10 +12,10 @@
 	"entrypoints": {
 		"main": [
 			"io.github.psychopath21312.welcome.Welcome2Server"
-		],
+		]
 	},
 	"mixins": [
-		"welcome2server.mixins.json",
+		"welcome2server.mixins.json"
 	],
 	"depends": {
 		"fabricloader": ">=0.14.21",

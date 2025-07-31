@@ -1,12 +1,10 @@
-package io.github.psychopath21312.welcome
+package io.github.psychopath21312.welcome;
 
 import net.fabricmc.api.ModInitializer;
-import net.fabricmc.fabric.api.event.player.PlayerJoinCallback;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.text.Text;
-import net.minecraft.text.Style;
-import net.minecraft.text.util.Formatting;
+import net.minecraft.util.Formatting;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -27,13 +25,13 @@ public class Welcome2Server implements ModInitializer {
 			String playerName = player.getName().getString();
 			
 			Text welcomeMessage = Text.literal("Добро пожаловать на сервер, ")
-				.styled(style -> style.withColor(formatting.GREEN).withBold(true))
+				.styled(style -> style.withColor(Formatting.GREEN).withBold(true))
 				.append(Text.literal(playerName)
-					.styled(style -> style.withColor(formatting.AQUA).withItalic(true)))
+					.styled(style -> style.withColor(Formatting.AQUA).withItalic(true)))
 				.append(Text.literal("!")
-					.styled(style -> style.withColor(formatting.GREEN).withBold(true)))
+					.styled(style -> style.withColor(Formatting.GREEN).withBold(true)));
 
 			player.sendMessage(welcomeMessage, false);
-		})
+		});
 	}
 }
