@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "welcome2server",
+	"version": "${version}",
+	"name": "Welcome2Server",
+	"description": "This is example description",
+	"authors": [
+		"Psychopath21312"
+	],
+	"icon": "assets/welcome2server/icon.png",
+	"environment": "server",
+	"entrypoints": {
+		"main": [
+			"io.github.psychopath21312.welcome.Welcome2Server"
+		],
+	},
+	"mixins": [
+		"welcome2server.mixins.json",
+	],
+	"depends": {
+		"fabricloader": ">=0.14.21",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

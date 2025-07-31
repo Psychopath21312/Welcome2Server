@@ -1,0 +1,14 @@
+{
+	"requered": true,
+	"package": "io.github.psychopath21312.welcome.mixin",
+	"compatibilityLevel": "JAVA_17",
+	"mixins": [
+		"ExampleMixin"
+	],
+	"injectors": {
+		"defaultRequire": 1
+	},
+	"overwrites": {
+		"requireAnnotation": true
+	}
+}
